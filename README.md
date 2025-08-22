@@ -1,83 +1,158 @@
-# 📘 Linear Regression
+📘 Linear Regression
 
----
+Linear Regression is a fundamental statistical method used to model the relationship between a dependent variable (Y) and one or more independent variables (X). It aims to fit the best line (or hyperplane) that minimizes the error between predicted and actual values.
 
-## 📌 Introduction
-Linear Regression is a fundamental statistical method used to model the relationship between a **dependent variable (y)** and one or more **independent variables (x)**.  
-The goal is to fit a line (or hyperplane in higher dimensions) that best predicts the target variable.
+🟢 Simple Linear Regression
+📌 Definition
 
-General Equation:
-\[
-y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n + \epsilon
-\]
+Simple Linear Regression models the relationship between one independent variable (X) and a dependent variable (Y) by fitting a straight line of the form:
 
-Where:  
-- \( y \) = dependent variable (target)  
-- \( x_1, x_2, \dots, x_n \) = independent variables (features)  
-- \( \beta_0 \) = intercept  
-- \( \beta_1, \beta_2, \dots, \beta_n \) = coefficients  
-- \( \epsilon \) = error term  
+𝑌
+=
+𝛽
+0
++
+𝛽
+1
+𝑋
++
+𝜖
+Y=β
+0
+	​
 
----
++β
+1
+	​
 
-## 🟢 Simple Linear Regression
-Simple Linear Regression involves **only one independent variable (x)**.  
-It fits a straight line that best represents the relationship between input \( x \) and output \( y \).
+X+ϵ
 
-Equation:
-\[
-y = \beta_0 + \beta_1 x + \epsilon
-\]
+where:
 
-### Methods
-1. **Closed-form Solution (Normal Equation)**  
-   - Direct formula:  
-   \[
-   \beta = (X^TX)^{-1}X^Ty
-   \]  
-   - Efficient for small datasets.  
+𝛽
+0
+β
+0
+	​
 
-2. **Gradient Descent (Iterative Method)**  
-   - Minimizes the cost function (Mean Squared Error):  
-   \[
-   J(\beta) = \frac{1}{2m} \sum_{i=1}^{m} (h_\beta(x^{(i)}) - y^{(i)})^2
-   \]  
-   - Update rule:  
-   \[
-   \beta_j := \beta_j - \alpha \frac{\partial}{\partial \beta_j} J(\beta)
-   \]  
-   - Scales better for large datasets.  
+ = Intercept
 
----
+𝛽
+1
+β
+1
+	​
 
-## 🔵 Multiple Linear Regression
-Multiple Linear Regression involves **two or more independent variables**.  
-It models the relationship between multiple features and a single target variable.
+ = Slope
 
-Equation:
-\[
-y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \dots + \beta_n x_n + \epsilon
-\]
+𝜖
+ϵ = Error term
 
-### Methods
-1. **Closed-form Solution (Normal Equation)**  
-   - Uses the same formula as SLR:  
-   \[
-   \beta = (X^TX)^{-1}X^Ty
-   \]  
-   - Works directly with multiple variables.  
+🛠️ My Work
 
-2. **Gradient Descent**  
-   - Extends naturally to multiple variables.  
-   - Updates all coefficients simultaneously to minimize error.  
+I implemented Simple Linear Regression from scratch using mathematical intuition (without built-in ML libraries).
 
----
+Developed a custom class for training and prediction.
 
-## 📊 Comparison
+Verified performance using the R² score.
 
-| Aspect | Simple Linear Regression (SLR) | Multiple Linear Regression (MLR) |
-|--------|--------------------------------|----------------------------------|
-| Variables | One independent variable | Two or more independent variables |
-| Equation | \( y = \beta_0 + \beta_1x + \epsilon \) | \( y = \beta_0 + \beta_1x_1 + \beta_2x_2 + \dots + \beta_nx_n + \epsilon \) |
-| Visualization | Straight line in 2D | Hyperplane in n-D space |
-| Use Cases | Predicting outcome with a single factor (e.g., house price based on size) | Predicting outcome with multiple factors (e.g., house price based on size, location, age) |
+🔵 Multiple Linear Regression
+📌 Definition
+
+Multiple Linear Regression models the relationship between two or more independent variables (X₁, X₂, …, Xn) and a dependent variable (Y). The general equation is:
+
+𝑌
+=
+𝛽
+0
++
+𝛽
+1
+𝑋
+1
++
+𝛽
+2
+𝑋
+2
++
+⋯
++
+𝛽
+𝑛
+𝑋
+𝑛
++
+𝜖
+Y=β
+0
+	​
+
++β
+1
+	​
+
+X
+1
+	​
+
++β
+2
+	​
+
+X
+2
+	​
+
++⋯+β
+n
+	​
+
+X
+n
+	​
+
++ϵ
+
+where:
+
+𝛽
+0
+β
+0
+	​
+
+ = Intercept
+
+𝛽
+𝑖
+β
+i
+	​
+
+ = Coefficient for feature 
+𝑋
+𝑖
+X
+i
+	​
+
+
+𝜖
+ϵ = Error term
+
+🛠️ My Work
+
+I also implemented Multiple Linear Regression from scratch using mathematical intuition.
+
+Built a custom class for multi-feature regression.
+
+Evaluated results using the R² score.
+
+📊 Key Notes
+
+Both implementations focus on understanding the math behind regression.
+
+R² Score was used to validate the model’s performance.
+
+This repo is for educational and learning purposes, not production ML.
