@@ -22,7 +22,7 @@ where:
 I implemented **Simple Linear Regression** from scratch using **mathematical intuition** (without built-in ML libraries).  
 - Developed a **custom class** for training and prediction.  
 - Verified performance using the **R² score**.  
-- Link: https://colab.research.google.com/drive/1ynDhaU9SIWxiTSDsVxyDY6p3HIAuIOb6?usp=sharing
+- Link: https://colab.research.google.com/drive/1AI_Tf0yC1yzOpb2KDKZU-tngKsbF53m2?usp=sharing
 ---
 
 ## 🔵 Multiple Linear Regression  
@@ -43,7 +43,7 @@ where:
 I also implemented **Multiple Linear Regression** from scratch using **mathematical intuition**.  
 - Built a **custom class** for multi-feature regression.  
 - Evaluated results using the **R² score**.  
-- Link: https://colab.research.google.com/drive/1AI_Tf0yC1yzOpb2KDKZU-tngKsbF53m2?usp=sharing
+- Link: https://colab.research.google.com/drive/1ynDhaU9SIWxiTSDsVxyDY6p3HIAuIOb6?usp=sharing
 ---
 
 ## 📊 Key Notes  
